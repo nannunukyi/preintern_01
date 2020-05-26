@@ -7,12 +7,14 @@ header
 }
 
 #linksection
-{   margin-top: 15px;
+{   
+margin-top: 15px;
     border-bottom-left-radius: 20px;
     border-top-right-radius:20px ;
     height: 30px;
     padding-top: 15px;
-    background-color:white;
+    padding-left: 70px;
+    background-color:gold;
     text-align:left;
 }
 #linksection a 
@@ -27,7 +29,8 @@ html,body {
 	padding: 0;
 }
 .slider {
-	width: 1024px;
+  width: 1024px;
+  height: 70%;
 	margin: 2em auto;
 	
 }
@@ -142,12 +145,3 @@ label
 {
   text-align: left;
 }
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: darkblue;
-    color: white;
-    text-align: center;
-    }
