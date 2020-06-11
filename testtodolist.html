@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
+        <script type='text/javascript'>
+            
+            $(function () {
+                $('#searchInput').keyup(function () {
+                    if ($(this).val() == '') {
+                        //Check to see if there is any text entered
+                        // If there is no text within the input ten disable the button
+                        $('.enableOnInput').prop('disabled', true);
+                    } else {
+                        //If there is text in the input, then enable the button
+                        $('.enableOnInput').prop('disabled', false);
+                    }
+                });
+            }); 
+        </script>
+        <script type='text/javascript'>
+        document.addEventListener('DOMContentLoaded', () => {
+
+                document.querySelector('#todo-list').onsubmit = () => {
+
+                    const li = document.createElement('li');
+                    li.innerHTML = document.querySelector('#searchInput').value;
+
+                    document.querySelector('#list').append(li);
+
+                    document.querySelector('#searchInput').value = '';
+
+                    return false;
+                };
+
+            });
+        </script>
+        <title>PreIntern Group</title>
+    </head>
+    <body>
+        <h1>To Do List</h1>
+        <ul id="list">
+        </ul>
+        <div id='frame'>
+        <div class='search'>
+       
+            <form method='post'id="todo-list">
+                <input type='text' name='searchQuery' id='searchInput' />
+                <input type='submit' name='submit' id='submitBtn' class='enableOnInput' disabled='disabled' />
+            </form>
+        </div>
+    </div>
+    </body>
+</html>
